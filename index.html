@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ags Sierra Fría ANP 01</title>
+    <meta name="description" content="Sierra Fría Ags vegetación"/>
+    <meta name="Author" content="Héctor René Becerril Cejudo"/>
+    <meta name="keywords" content="multitemporal, corrección topográfica, sierra fría, landsat, teledetección, remote sensing"/>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<script src="actions.js"></script>
+    <div class="agrupar1">
+        <div class="agrupar1">
+
+    <header>
+        <img src="dgetaycm_ags_logo.jpg" alt="institucional"
+        style="width:230px;float:right;filter:grayscale(100%)">
+    <h1>
+        <br>Dinámica multitemporal del Vigor Vegetal <br>en el Área Natural Protegida Sierra Fría,<br> Aguascalientes, México.
+        <br><br>
+    </h1>
+    <h3>
+        <text class="autor"; style="color: black;background:#F3E210; padding:5px 18px 5px 18px">
+            M.C. Héctor René Becerril Cejudo<sup>1</sup>; Dr. Víctor M. Rodríguez Moreno<sup>2</sup>;
+        </text>
+        <br>
+        <text class="autor"; style="color: black;background:#F3E210; padding:5px 18px 5px 18px">
+            Dr. Joaquín Sosa Ramírez<sup>3</sup>; Dr. Vicente Días Núñez<sup>4</sup>
+        </text>
+    </h3>
+    <text class="autor"; style="color: black; padding-left:60%; font-size:12px;background:none">
+            14 de novimbre de 2019
+    </text>
+        <hr>
+    </header>
+    <section>
+       <h2>
+    <div style="font-weight: bold; background:none; color:black; font-style:italic">
+            &emsp;Resumen
+    </div>
+       </h2>
+    <div style="background:#F5F5F1; color:black; padding: 5px 5px 5px 5px;">
+        El Área Natural Protegida Sierra Fría (ANPSF) representa una zona de riqueza y
+        diversidad biológica que enfrenta amenazas de origen biótico y abiótico y que se
+        manifiestan principalmente en la fragmentación del ecosistema. Se utilizó el
+        estimado de reflectancia de una serie histórica de imágenes Thematic Mapper 5
+        para una superficie de estudio de 11,935.3 ha. El período de la serie comprendió
+        21 años y se dividió en dos periodos de contraste, 1990-2001 y 2001-2011. Se
+        definió como Vigor Vegetal (VV) a la relación de verdor y humedad observada en
+        un pixel a través de los índices NDVI y NDWI. Utilizando diferentes técnicas de
+        análisis incluyendo el Análisis del Vector de cambio, la Clasificación por Ángulo
+        Espectral, y la Diferencia Simple entre Imágenes, se detectaron cambios moderados
+        en la cubierta vegetal: en el primer período se observó una disminución en VV en
+        el 58.9% del área de estudio, donde solo 658 ha presentaron cambio en cobertura
+        en este sentido y principalmente en superficies con orientación Sur; el segundo
+        período resultó en un aumento en VV para el 85.1% del área de estudio con 730 ha
+        de cambio en cobertura en ese sentido y principalmente en superficies con
+        orientación Norte. Para el área de estudio, la prueba de &chi;<sup>2</sup> indicó que la dinámica
+        de los cambios en cobertura no es independiente del período de estudio ni de la
+        orientación del terreno, con p < 0.000.
+        <br><br>
+        <b>Palabras Clave</b>: análisis multitemporal, Sierra Fría, vector
+        de cambio, ángulo espectral, teledetección.
+        <br><br>
+        <hr>
+        <br>
+        <h2>
+        <div style="font-weight: bold; background:none; color:black; font-style:italic">
+            &emsp;Abstract
+        </div>
+            </h2>
+        The Sierra Fría Natural Protected Area (SFNPA) represents a zone of richness and
+        biological diversity in process of recovery that faces different threats, mainly the
+        fragmentation of the ecosystem. The reflectance estimate of a historical series of
+        Thematic Mapper 5 images was used for a study area of 11,935.3 ha. The period of the
+        series comprised 21 years and was divided into two periods of contrast: 1990-2001
+        and 2001-2011. Vigor Vegetal (VV) was defined as the greenness and humidity observed
+        in a pixel through the NDVI and NDWI indexes. Applying different technics including
+        Vector Change Analysis, Spectral Angle Mapper and the Simple Difference between Images,
+        moderate changes in vegetation cover were detected: a decrease in VV was observed in
+        58.9% of the study area in the first period, where only 658 ha had a change in coverage
+        in this regard and mainly in areas facing South; second period resulted in an increase
+        in VV for 85.1% of the study area with 730 ha of change in coverage in this regard
+        mainly in areas facing North. For the study area, the test of &chi;<sup>2</sup> indicated that the
+        dynamics of changes in coverage is not independent of the period of study nor of the
+        terrain aspect, with p < 0.000.
+        <br><br>
+        <b>Keywords</b>: multitemporal analysis, Sierra Fría, change vector
+        analysis, spectral angle mapper, remote sensing.
+        <br><br>
+        <hr>
+        <br>
+        <section style="opacity:0.5">
+        <sup>1</sup>* Dirección General de Educación Tecnológica Agropecuaria y Ciencias del
+        Mar (DGETAyCM). Eliseo Trujillo No. 106 Barrio del Encino. 20240, Aguascalientes. Tel:
+        4499166289: E-mail: hector.becerril@dgetaycm.sems.gob.mx<br>
+        <sup>2</sup>* Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias
+        (INIFAP). Km 32.5 Carretera Aguascalientes-Zacatecas, Pabellón de Arteaga,
+        Aguascalientes. E-mail: rodriguez.victor@inifap.gob.mx<br>
+        <sup>3</sup>* Universidad Autónoma de Aguascalientes (UAA). Centro de Ciencias
+        Agropecuarias. Jesús María, Aguascalientes. E-mail: jsosar@correo.uaa.mx<br>
+        <sup>4</sup>* Universidad Autónoma de Aguascalientes (UAA). Centro de Ciencias
+        Agropecuarias. Jesús María, Aguascalientes. E-mail: vicente-diaz@hotmail.com
+            </section>
+        <br><br>
+        <hr>
+        <br>
+        <h2>
+        <div style="font-weight: bold; background:none; color:black; font-style:italic">
+            &emsp;Introducción
+        </div>
+            </h2>
+        El Área Natural Protegida Sierra Fría (ANPSF) representa una zona de riqueza y diversidad
+        biológica estratégica para el desarrollo interestatal de Aguascalientes y Zacatecas, y para
+        la estabilidad del clima, ya que brinda servicios ambientales de relevancia, como lo es la
+        conservación de la biodiversidad, la captura de carbono, la conservación de suelos, la
+        captación y filtración del agua, sin dejar de lado la belleza escénica que es aprovechada
+        para el esparcimiento de la población. El ANPSF alberga diferentes ecosistemas que fueron
+        perturbados a través de diferentes momentos históricos y actualmente cuenta con un plan de
+        manejo cuyo objetivo primario es la conservación de la biodiversidad y la estructura ecológica
+        (Gobierno del Estado de Aguascalientes, 2016). Las principales amenazas identificadas, para
+        los objetivos de conservación, son la fragmentación del ecosistema, la modificación de hábitat,
+        la competencia por introducción de especies exóticas, (Sosa, Solís, Jiménez, Íñiguez y Ortega,
+        2014), la afectación por organismos plaga, entre otras. En la década de 1990 a 2000 en México
+        sucedieron notables transformaciones en los ecosistemas de bosques, donde la vegetación secundaria
+        sustituyó a la vegetación original (Jiménez, <i>et al</i>., 2014; Arriola, Estrada, Ortega, Pérez y Gijón,
+        2014; Bezaury y Gutiérrez, 2009). La Sierra Fría no fue ajena a esta dinámica y de manera
+        constante se ha documentado el proceso de fragmentación de sus ecosistemas para el mismo período
+        (Chapa, Alba, y Sosa, 2008). Ante estas y otras amenazas, el gobierno estatal, a partir del 30 de
+        enero de 1994, declaró la protección para el ANPSF (Gobierno del Estado de Aguascalientes, 1994)
+        con carácter de Zona sujeta a Conservación, con una superficie de 112,090 ha. Años más tarde, el
+        17 de agosto de 2015, el Gobierno del estado decretó su recategorización administrativa como Área
+        Natural Protegida en la categoría de Área Silvestre Estatal, con una superficie de107,040 ha
+        (Lozano, 2010).<br>
+        <br><br>
+
+        <h2>
+        <div style="font-weight: bold; background:none; color:black; font-style:italic">
+            &emsp;Materiales y métodos
+        </div>
+            </h2>
+        Las imágenes satelitales, fotografías aéreas e imágenes de vehículos no tripulados, se han
+        convertido en el conjunto de datos más importantes para caracterizar los procesos de intercambio
+        de gases entre la cubierta del suelo y la atmósfera, por su serie histórica, frecuencia de
+        registro y resolución espacial; de acuerdo con Azzouzi, Vidal y Bentounes (2015), representan un
+        extenso banco de datos espacio temporales que han facilitado el monitoreo de cambios en el uso
+        del suelo y la vegetación. Se han desarrollado diferentes técnicas para la detección de cambios
+        que van desde la fotointerpretación (Alemayehu, Rectalá, Fabbri y Sánchez, 2006; Nainggolan <i>et
+        al</i>., 2011) hasta procedimientos algebraicos más complejos que han permitido dar seguimiento a
+        fenómenos como la expansión urbana y agrícola, la incidencia de plagas, la deforestación y la
+        desertificación, entre otros. Una de las técnicas más utilizadas es el Análisis del Vector de
+        Cambio (VCA por sus siglas en inglés) (Azzouzzi <i>et al</i>., 2015; Zhuang, Kazhong, Fan y Yu, 2016),
+        que describe la magnitud y ángulo de dirección de cambio (Singht y Talwar, 2014) entre el valor
+        registrado en un pixel en dos fechas diferentes. Esta técnica fue diseñada originalmente para
+        aplicarse dentro de un espacio espectral bidimensional (Carvalho, Guimaraes, Gillespie, Silva y
+        Gomes, 2011) y de acuerdo con Zhuang <i>et al</i>., (2016), presenta mejores resultados cuando se combina
+        con la técnica de Clasificación por Ángulo Espectral (SAM por sus siglas en inglés). Combinando
+        las dos técnicas, entre dos fechas de imágenes se obtienen tres métricas de relevancia para el
+        estudio de la dinámica de los ecosistemas: 1) magnitud del cambio, 2) dirección del cambio, y 3)
+        similitud entre coberturas.
+        <br><br>
+        <b>Descripción del área de estudio</b>. El área de estudio se extiende desde los 102&#176;31’56’’ a los
+        102&#176;37’44’’ de longitud Oeste, y desde los 22&#176;07’54’’ a los 22&#176;14’10’’ de latitud Norte,
+        con una superficie de 11,975.5 ha
+        <a href="/00_AREA_DE_ESTUDIO.jpg"
+               title="Hellow all"
+               target="popup"
+               onclick="window.open('/00_AREA_DE_ESTUDIO.jpg','popup','width=850,height=550'); return false;">
+        (Figura 1)
+        </a>
+
+        y se ubica dentro de los límites del ANPSF y con un rango
+        altitudinal que va de los 2,000 a los 2,800 msnm.
+
+        <br><br>
+
+        <a href="/00_AREA_DE_ESTUDIO.jpg"
+               title="Hellow all"
+               target="popup"
+               onclick="window.open('/00_AREA_DE_ESTUDIO.jpg','popup','width=1000,height=550'); return false;">
+        <img src="00_AREA_DE_ESTUDIO.jpg" alt="Fig.1." title="Área de estudio."
+        style="width:720px">
+        </a>
+        <figcaption><i>Fig 1. El recuadro gris (derecha) representa el área de estudio dentro del polígono
+            del ANPSF.</i></figcaption>
+
+        <br><br>
+
+        Las topoformas predominantes en la zona son Meseta Típica, Sierra Baja y Sierra Alta con Mesetas,
+        Lomerío con Cañadas y Lomerío con Llanuras (Lozano, 2010). Es importante señalar que dentro del
+        ANPSF se encuentra el 90% de los bosques templados del estado de Aguascalientes, y que las comunidades
+        bióticas predominantes son asociaciones de encinos con otras especies como pino, manzanita, matorral
+        espinoso, matorral rosetófilo y pastizales. La vegetación arbórea dominante del ANPSF la representan
+        comunidades de los géneros <i>Pinus</i> y <i>Quercus</i> (Salado y Martínez, 2008; Sosa <i>et al</i>., 2014), aunque se
+        presentan también comunidades de <i>Arctostaphylos</i> y <i>Juniperus</i> (Sosa <i>et al</i>., 2014). La vegetación en la
+        zona de estudio, que corresponde mayormente a zonas de mesetas y de cañada, la conforman
+        principalmente bosques de encino (<i>Quercus eduardii</i>, <i>Q. sideroxila</i>) asociados a pinos (<i>Pinus spp</i>.),
+        mientras que en mesetas y laderas predominan táscate (<i>Juniperus deppeana</i>), madroño (<i>Arbutus xalapensis</i>
+        y <i>A. glandulosa</i>) y manzanita (<i>Arctostaphylos punges</i>); se presentan además pastizales y otras especies
+        de encino ampliamente distribuidas en el chaparral como es el caso de <i>Q. potosina</i> y <i>Q. rugosa</i> que a su
+        vez se asocian con manzanita y táscate (Sosa, <i>et al</i>., 2015).
+        <br><br>
+        Las principales amenazas que han sido identificadas para la vegetación del ANPSF son las sequías
+        prolongadas, el sobrepastoreo, los incendios forestales, la introducción de especies exóticas, la
+        erosión, la atomización de la propiedad (Sosa <i>et al</i>., 2014) y la presencia de plagas forestales
+        (Sosa <i>et al</i>., 2015; Díaz <i>et al</i>., 2014; Clark <i>et al</i>., 2011).
+        <br><br>
+        <b>Materiales</b>. Se utilizó el Modelo de Elevación del Terreno (MET) (INEGI, 2017) y seis imágenes del
+        sensor Thematic Mapper de la plataforma Landsat 5 (TM-5) con tamaño de pixel de 30 m; las imágenes
+        están libres de nubosidad y su fecha de adquisición es de febrero a abril de los años 1990, 2001 y
+        2011 (Cuadro 1); se utilizaron las bandas 3 (R: 0.63-0.69 &mu;m), 4 (NIR: 0.76-09 &mu;m) y 5
+        (SWIR: 1.55-1.75 &mu;m). El software utilizado fue QGIS 2.14, ENVI 5.3, ArcGIS 9.3, R y R-Studio.
+        <br><br>
+        <table>
+            <figcaption><i>Cuadro 1. Clave de identificación de las imágenes TM-5 utilizadas y fecha de
+                adquisición.</i></figcaption>
+        <tr>
+            <th>Identificador</th>
+            <th>Fecha</th>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>LT50290451990066XXX02</td>
+            <td>1990-03-07</td>
+        </tr>
+        <tr>
+            <td>LT50290451990082XXX02</td>
+            <td>1990-03-23</td>
+        </tr>
+        <tr>
+            <td>LT50290452001048XXX02</td>
+            <td>2001-02-17</td>
+        </tr>
+            <tr>
+            <td>LT50290452001112XXX02</td>
+            <td>2001-04-22</td>
+        </tr>
+            <tr>
+            <td>LT50290452011044EDC00</td>
+            <td>2011-02-13</td>
+        </tr>
+            <tr>
+            <td>LT50290452011060EDC00</td>
+            <td>2011-03-01</td>
+        </tr>
+    </table>
+       <br><br>
+        Para el presente estudio se monitoreó el Vigor Vegetal (VV) como la relación de humedad y verdor
+        expresada a través de la respuesta espectral de un pixel en diferentes fechas; de este modo la
+        pérdida de VV se define como la variación conjunta de humedad y verdor que expresa un decremento en
+        sus valores a través de dos fechas; y la ganancia de VV es el comportamiento inverso, es decir, el
+        incremento en los valores de humedad y verdor a través de dos fechas. Este concepto lo basamos en
+        que el verdor del ecosistema está asociado con la cantidad de agua de que dispone.
+        <br><br>
+        En estudios multitemporales es necesario hacer una serie de correcciones sobre las imágenes debido
+        a que, al tratarse de fechas distintas, pueden presentarse variaciones en el valor de los pixeles o
+        distorsiones geométricas causadas por diferentes factores como pueden ser las condiciones
+        atmosféricas, el ángulo de elevación solar al momento de registro de la imagen o la posición del
+        sensor satelital con respecto a la superficie observada, entre otros. La primer corrección aplicada fue el
+        ajuste geométrico de las imágenes y del MET, que consiste en la transformación de las coordenadas
+        de los pixeles en una imagen, de tal manera que estos coincidan con exactitud con los pixeles de
+        otra imagen de referencia, con esto se busca asegurar que se está comparando el mismo sitio a
+        través del tiempo en cada imagen. Para este ajuste se utilizaron diferentes puntos de control imagen
+        a imagen y como referencia la imagen TM-5 con fecha de adquisición 2011- 03-01; el valor del Error
+        Medio Cuadrático (RMSE por sus siglas en inglés) sirvió como un indicador de la magnitud del ajuste
+        realizado en cada imagen (Cuadro 2).
+        <br><br>
+        <table>
+            <figcaption><i>Cuadro 2. Número de puntos de control y valores del error cuadrático medio (RMSE)
+                en la corrección geométrica. La mayor corrección observada fue sobre el MET.</i></figcaption>
+        <tr>
+            <th>Imagen</th>
+            <th>Número de puntos</th>
+            <th>RMSE</th>
+        </tr>
+            <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>1990-03-07</td>
+            <td>16</td>
+            <td>0.298411</td>
+        </tr>
+        <tr>
+            <td>1990-03-23</td>
+            <td>12</td>
+            <td>0.001695</td>
+        </tr>
+        <tr>
+            <td>2001-02-17</td>
+            <td>13</td>
+            <td>0.032218</td>
+        </tr>
+            <tr>
+            <td>2001-04-22</td>
+            <td>13</td>
+                <td>0.020476</td>
+        </tr>
+            <tr>
+            <td>2011-02-13</td>
+            <td>16</td>
+                <td>0.01088</td>
+        </tr>
+            <tr>
+            <td>MET</td>
+            <td>26</td>
+                <td>0.48891</td>
+        </tr>
+    </table>
+        <br><br>
+        Posteriormente se aplicó una corrección topográfica sobre las imágenes TM-5 siguiendo el método del
+        Factor C (Ediriweera <i>et al</i>., 2013; Chuvieco, 2010), y se aplicó también una corrección atmosférica
+        con el módulo FLAASH del software ENVI (Aguilar, Mora y Vargas, 2015; HGS, 2017). Posteriormente se
+        promediaron los valores de reflectancia de las dos imágenes de cada año para obtener una sola imagen
+        anual
+        <a href="/CORRECCIONES-01.png"
+               title="Hellow all"
+               target="popup"
+               onclick="window.open('/CORRECCIONES-01.png','popup','width=1000,height=600'); return false;">
+        (Figura 2)
+        </a>
+        . Se eliminaron los pixeles que visualmente se identificaron (para al menos uno de
+        los años) como errores del sensor o como cuerpos de agua, reduciendo la superficie de estudio a
+        11,935.3 ha.
+        <br><br>
+
+        <a href="/CORRECCIONES-01.png"
+               title="Hellow all"
+               target="popup"
+               onclick="window.open('/CORRECCIONES-01.png','popup','width=1000,height=600'); return false;">
+        <img src="CORRECCIONES-01.png" alt="Fig.2." title="Área de estudio."
+        style="width:720px">
+        </a>
+        <figcaption><i>Fig 2. Imágenes TM-5 antes de las correcciones (arriba), y después de las
+            correcciones (abajo) donde se observa un mayor contraste entre las coberturas presentes
+            así como la reducción del efecto de sombra del terreno.</i></figcaption>
+
+        <br><br>
+
+        En cuanto al verdor de la planta, este es una respuesta espectral al contenido de pigmentos en
+        la hoja; el Índice de Vegetación de Diferencia Normalizada (NDVI por sus siglas en inglés) es
+        un indicador numérico ampliamente utilizado (Rodríguez y Bullock, 2013) que describe el verdor
+        de la vegetación y tiende a presentar valores altos en la presencia de mayor densidad de clorofila
+        (Meera, Parthiban y Nagaraj, 2015). Por otro lado, el contenido de agua en la planta se manifiesta
+        con una fuerte absorción espectral en la región que va de los 1.5 a los 2.5 ⎧m; por otro lado, el
+        Índice de Agua de Diferencia Normalizada (NDWI por sus siglas en inglés) es un indicador del
+        contenido de agua en la vegetación y tiende a presentar valores altos ante la mayor presencia de
+        agua y principalmente cuando el Índice de Área Foliar es mayor a 4 (Gao, 1996). Con base en lo
+        anterior, es posible describir la dinámica temporal del VV a partir de monitorear los emplazamientos
+        en el valor de los índices NDWI y NDVI para una misma posición geográfica a través de diferentes fechas.
+        <br><br>
+
+        Hay tres métricas que son de interés respecto al emplazamiento en los valores del NDVI y NDWI observados
+        en un pixel en dos fechas: 1) la magnitud del emplazamiento; 2) la dirección de cambio o ángulo formado
+        entre la dirección de emplazamiento y la horizontal, y 3) la similitud observada a través del ángulo
+        formado entre las firmas espectrales de las dos fechas. Aquellos pixeles que expresan valores altos en
+        la magnitud de cambio y ángulos mayores entre firmas, son clasificados como zonas relacionadas con la
+        sustitución del tipo de cobertura en el territorio.
+        <br><br>
+
+        Con los datos de reflectancia de cada año se generaron las imágenes de los índices NDWI (Gao, 1996) y
+        NDVI (Meera <i>et al</i>., 2015; Bhandari, Kumar y Singh, 2012; Espinosa <i>et al</i>., 2017; Rodríguez y Bullock,
+        2013) como se muestra a continuación:
+        <br><br>
+
+        <p>
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; NDVI = (NIR - R) / (NIR + R)
+        <br>
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; NDWI = (NIR - SWIR) / (NIR + SWIR)
+            </p>
+        <br><br>
+        Posteriormente se creó una imagen de dos bandas (b y k) para cada año, donde la banda b corresponde
+        al NDVI y la banda k al NDWI; sobre las imágenes resultantes se llevaron a cabo los análisis para la
+        detección de cambios. El primer análisis fue el VCA del que se obtuvieron las medidas Magnitud de
+        Cambio (MC) y Dirección de Cambio (DC). La medida de MC se calculó como lo indica la siguiente ecuación
+        (Louakfaoui, Casanova, y Romo, 2001; Chuvieco, 2010):
+        <br><br>
+        <p>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; MC<sub>b,k</sub>=((NDVI<sub>t2</sub> -
+            NDVI<sub>t1</sub>)<sup>2</sup> + ((NDWI<sub>t2</sub> - NDWI<sub>t1</sub>)<sup>2</sup>)<sup>1/2</sup>
+            </p>
+        <br><br>
+
+        donde MC<sub>b,k</sub> indica la Magnitud de Cambio observada en un pixel con respecto a los valores de las bandas
+        b y k contrastados en dos fechas (t<sub>1</sub> y t<sub>2</sub>).
+        <br><br>
+        En cuanto al valor de DC, este se calculó como el ángulo formado entre el eje horizontal y la dirección
+        de emplazamiento observada en los valores de las bandas b y k de un pixel contrastados en dos fechas
+        (Chuvieco, 2010):
+        <br><br>
+
+        <p>
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        DC<sub>b,k</sub> = arctan( (NDWI<sub>t2</sub> - NDWI<sub>t1</sub>) / (NDVI<sub>t2</sub> - NDVI<sub>t1</sub>) )
+        </p>
+        <br><br>
+
+        donde DC<sub>b,k</sub> indica el ángulo de Dirección de Cambio en el emplazamiento de los valores de las bandas b y k
+        observado en un pixel a través de dos fechas (t<sub>1</sub> y t<sub>2</sub>).
+        <br><br>
+        Los valores de DC observados en cada pixel se clasificaron en períodos de &pi;/2, dividiendo así el espacio
+        espectral de los índices en cuadrantes (Q<sub>i</sub>). La Dirección de Cambio resultante en Q<sub>1</sub> representa ganancia
+        de VV; y Q<sub>3</sub> representa pérdida de VV; por su parte Q<sub>2</sub> representa cambios donde hay ganancia de humedad con
+        pérdida de verdor, mientras que Q<sub>4 </sub>representa cambios donde hay ganancia de verdor con pérdida de humedad
+        <a href="/FG_03_Cuadrantes Q ENGLISH-01.jpg"
+               title="Hellow all"
+               target="popup"
+               onclick="window.open('/FG_03_Cuadrantes Q ENGLISH-01.jpg','popup','width=700,height=400'); return false;">
+        (Figura 3)
+        </a>
+        .
+        <br><br>
+
+        <a href="/FG_03_Cuadrantes Q ENGLISH-01.jpg"
+               title="Hellow all"
+               target="popup"
+               onclick="window.open('/FG_03_Cuadrantes Q ENGLISH-01.jpg','popup','width=700,height=400'); return false;">
+        <img src="FG_03_Cuadrantes Q ENGLISH-01.jpg" alt="Fig.3." title="Área de estudio." class="center"
+        style="width:400px">
+        </a>
+
+        <figcaption><i>Fig 3. Espacio espectral de los índices dividido en cuadrantes (Q<sub>i</sub> ) en función de DC.</i></figcaption>
+
+        <br><br>
+
+        Se consideró incluir además una medida de similitud que permitiera mejorar la detección de cambios,
+        principalmente aquellos cambios relacionados con la sustitución de la cobertura vegetal. Para esto se
+        utilizó la técnica de Clasificación por Ángulo Espectral (SAM por sus siglas en inglés), la cual se
+        basa en el hecho de que un tipo de cobertura específico, registrado en un pixel, tiene una respuesta
+        espectral característica que se representa a través de una firma espectral (Sohn y Rebello, 2002),
+        dicha firma espectral puede compararse con otra en una fecha distinta y para el mismo punto geográfico;
+        el nivel de similitud entre ambas firmas se estima midiendo el ángulo formado entre las mismas dentro
+        del espacio espectral (Chuvieco, 2010):
+        <br><br>
+
+        <a href="/FORMULA_SAME.jpg"
+               title="Hellow all"
+               target="popup"
+               onclick="window.open('/FORMULA_SAME.jpg','popup','width=650,height=200'); return false;">
+            <img src="FORMULA_SAME.jpg" alt="Fig.4." title="Área de estudio." class="center"
+        style="width:450px">
+        </a>
+
+        <br><br>
+        donde SAM<sub>b,k</sub> representa el Ángulo Espectral formado entre dos firmas espectrales en dos fechas observadas
+        (t<sub>1</sub> y t<sub>2</sub>) para una misma posición geográfica. La necesidad de incluir la medida de SAM radica en que, es
+        posible encontrar un cambio en la respuesta espectral de un punto geográfico que genere medidas similares de
+        magnitud y dirección, pero podría no haber similitud entre los tipos de cobertura presentes en cada fecha, donde a
+        mayor similitud corresponden valores mínimos de SAM
+        <a href="/FG_04_AnguloEspectral_compare english-01.jpg"
+               title="Hellow all"
+               target="popup"
+               onclick="window.open('/FG_04_AnguloEspectral_compare english-01.jpg','popup','width=1050,height=400'); return false;">
+        (Figura 4)
+        </a>
+        .
+
+        <br><br>
+
+        <a href="/FG_04_AnguloEspectral_compare english-01.jpg"
+               title="Hellow all"
+               target="popup"
+               onclick="window.open('/FG_04_AnguloEspectral_compare english-01.jpg','popup','width=1050,height=400'); return false;">
+            <img src="FG_04_AnguloEspectral_compare english-01.jpg" alt="Fig.4." title="Angles SAM ex." class="center"
+        style="width:700px">
+        </a>
+        <figcaption><i>Fig 4. Las gráficas representan dos mediciones en los que las firmas espectrales de dos fechas
+            (t<sub>1</sub> y t<sub>2</sub>) muestran valores similares para MC (&lambda;) y para el mismo cuadrante de DC (Q). En la imagen izquierda
+            se observa pérdida
+            de VV y un posible cambio de cobertura entre t<sub>1</sub> y t<sub>2</sub> debido al valor grande de SAM (&theta;), mientras que
+            la mayor similitud en las firmas espectrales de la imagen derecha (valor pequeño de &theta;) indica que se
+            trata del mismo tipo de cobertura en ambas fechas.
+        </i></figcaption>
+
+        <br><br>
+
+        El siguiente paso fue realizar una Diferencia Simple entre Imágenes (Myint <i>et al</i>., 2008); primero entre los datos
+        de MC de ambos períodos, y posteriormente entre los datos de SAM de ambos períodos, como se muestra a continuación:
+        <br><br>
+
+        <p>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; D<sub>M,C</sub> = MC<sub>i,j2</sub> -  MC<sub>i,j1</sub><br><br>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; D<sub>A,E</sub> = SAM<sub>i,j2</sub> - SAM<sub>i,j1</sub><br>
+            </p>
+        <br><br>
+        donde D<sub>MC</sub> indica la Diferencia de Magnitud de Cambio entre dos períodos para un pixel i; D<sub>AE</sub> indica la Diferencia de Ángulo
+        Espectral entre dos períodos para un pixel i; j<sub>1</sub> y j<sub>2</sub> son los períodos de estudio.
+        <br><br>
+
+        A partir de la estandarización de D<sub>MC</sub> y D<sub>AE</sub> se obtuvieron las variables Z<sub>MC</sub> y Z<sub>AE</sub>, en las que los pixeles con valores
+        extremos, es decir con valores más allá de una desviación típica con respecto a la media de su respectiva distribución,
+        representan cambios de mayor intensidad; por otro lado, los pixeles con valores localizados en el centro de las
+        distribuciones se interpretan como cambios de baja intensidad
+        <a href="/normalDist.jpg"
+               title="Hellow all"
+               target="popup"
+               onclick="window.open('/normalDist.jpg','popup','width=800,height=400'); return false;">
+        (Figura 5)
+        </a>
+        .
+        <br><br>
+
+        <a href="/normalDist.jpg"
+               title="Hellow all"
+               target="popup"
+               onclick="window.open('/normalDist.jpg','popup','width=800,height=400'); return false;">
+        <img src="normalDist.jpg" alt="Fig.5." title="Normal." class="center"
+        style="width:430px">
+        </a>
+
+        <figcaption><i>Fig 5. Distribución de diferencias estandarizadas: los pixeles pertenecientes a la zona de cambios de
+            mayor intensidad se localiza arriba de una desviación típica con respecto a la media.</i></figcaption>
+
+        <br><br>
+
+        Los pixeles con valores extremos en las distribuciones de Z<sub>MC</sub> se clasificaron como cambios de Mayor Magnitud (MMG),
+        mientras que los pixeles con valores extremos en la distribución de Z<sub>AE</sub> se clasificaron como cambios de Mayor Ángulo
+        Espectral (MAE). Estas clasificaciones se hicieron como lo indican las ecuaciones siguientes:
+        <br><br>
+
+        <p>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; MMC<sub>1</sub> &nbsp; < &nbsp; &lambda;<sub>&mu;</sub> -  &lambda;<sub>s</sub><br>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; SAM<sub>2</sub> &nbsp;&nbsp;&nbsp; > &nbsp; &lambda;<sub>&mu;</sub> -  &lambda;<sub>s</sub><br>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; MAE<sub>1</sub> &nbsp; &nbsp;< &nbsp; &theta;<sub>&mu;</sub> -  &theta;<sub>s</sub><br>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; MAE<sub>2</sub> &nbsp;&nbsp; < &nbsp; &theta;<sub>&mu;</sub> -  &theta;<sub>s</sub>
+            </p>
+        <br><br>
+
+        donde MMG<sub>j</sub> son aquellos pixeles con cambios de Mayor Magnitud en el período j; MAE<sub>j</sub> son aquellos pixeles con
+        cambios de Mayor Ángulo Espectral en el período j; &lambda;<sub>&mu;</sub> y &lambda;<sub>s</sub> son la media y la desviación típica de la
+        distribución de Z<sub>MC</sub>; &theta;<sub>&mu;</sub> y &theta;<sub>s</sub> son la media y la desviación típica de la distribución de Z<sub>AE</sub>.
+        <br><br>
+
+        Posteriormente se hizo la clasificación de lo que se denominó Zona de Cambio en Cobertura en cada período (ZCC<sub>j</sub>), y estas se
+        obtuvieron a partir de la intersección espacial de aquellos pixeles clasificados como MAE<sub>j</sub> y MMG<sub>j</sub>. Estas zonas están
+        relacionadas con el cambio de tipo de cobertura presente a través de un período.
+        <br><br>
+        El cálculo de superficies se hizo a partir del conteo de pixeles, los cuales se utilizaron para realizar diferentes pruebas de
+        independencia &chi;<sup>2</sup> (Agresti, 2002) con miras a identificar posibles asociaciones en los cambios observados.
+        <br><br>
+
+        Se consultaron datos climatológicos de la estación La Tinaja (CONAGUA, 2017) con la finalidad de conocer las condiciones de
+        precipitación y evaporación en las fechas observadas y si estas fueron similares o si pudieran representar algún factor de
+        variación en los datos registrados por el sensor. En el Cuadro 3 se muestran las variables Evaporación (EVP) y Precipitación
+        (PP) del período anual que va de mayo a diciembre para los años 1989, 2000 y 2010; y también del período invernal que va del
+        21 de diciembre previo y hasta la fecha de adquisición de la última imagen de cada año.
+        <br><br>
+
+        <table>
+        <figcaption><i>Cuadro 3. Valores de EVP y PP previo a la adquisición de las imágenes (mm acumulados).</i></figcaption>
+            <TR align="center"><TH rowspan="2"><TH colspan="2">1989<TH rowspan="2"><TH colspan="2">2000<TH rowspan="2"><TH colspan="2">2010
+            <TR><TH rowspan="1">PP<TH>EVP<TH>PP<TH>EVP<TH>PP<TH>EVP
+            <TR><TH rowspan="1">&nbsp;<TH>&nbsp;<TH>&nbsp;<TH>&nbsp;<TH>&nbsp;<TH>&nbsp;
+            <TR><TH>ANL<TD>484.4<TD colspan="2">1127.3<TD>679<TD colspan="2">1231<TD>505.5<TD>1,051.1
+
+        </table>
+        <br>
+        <table>
+
+
+            <TR align="center"><TH rowspan="2"><TH colspan="2">1990<TH rowspan="2"><TH colspan="2">2001<TH rowspan="2"><TH colspan="2">2011
+            <TR><TH rowspan="1">PP<TH>EVP<TH>PP<TH>EVP<TH>PP<TH>EVP
+            <TR><TH rowspan="1">&nbsp;<TH>&nbsp;<TH>&nbsp;<TH>&nbsp;<TH>&nbsp;<TH>&nbsp;
+            <TR><TH>INV<TD>75.5<TD colspan="2">394<TD>78.5<TD colspan="2">689.8<TD>5<TD>272.7
+            <br>
+        </table>
+         <caption><i>ANL: período anual<br>
+        INV: período invernal</i></caption>
+
+        <br><br>
+
+        Con el mismo propósito se contabilizaron los días transcurridos entre el último evento de lluvia y la fecha de adquisición de
+            cada imagen, definiendo como último evento de lluvia al último período de días continuos con registro de precipitación
+            (Cuadro 4).
+
+        <br><br>
+
+                <table>
+        <figcaption><i>Cuadro 4. Lluvia observada previo a la fecha de adquisición de las imágenes TM.</i></figcaption>
+            <TR align="center"><TH colspan="1">Fecha<TH>Lluvia en el último evento<TH>Días de lluvía en el evento<TH>Días transcurridos desde el último evento
+                    <TR align="center"><TH colspan="1"<TD>&nbsp; </TD>&nbsp; <TD>&nbsp; </TD> <TD>&nbsp; </TD>
+            <TR align="center"><TH colspan="1">07/03/1990<TD>22.5<TD>5<TD>17
+            <TR align="center"><TH colspan="1">23/03/1990<TD>8<TD>1<TD>15
+            <TR align="center"><TH colspan="1">17/02/2001<TD>1.5<TD>1<TD>45
+            <TR align="center"><TH colspan="1">22/04/2001<TD>24<TD>1<TD>4
+            <TR align="center"><TH colspan="1">13/02/2011<TD>3<TD>1<TD>10
+            <TR align="center"><TH colspan="1">01/03/2011<TD>3<TD>1<TD>26
+
+        </table>
+        <br><br>
+        <h2>
+    <div style="font-weight: bold; background:none; color:black; font-style:italic">
+            &emsp;Resultados
+    </div>
+       </h2>
+
+        A continuación se muestran primero los resultados detallados del comportamiento observado dentro de
+        ZCC<sub>j</sub> con respecto a la Dirección de Cambio y a la orientación del terreno y, posteriormente se muestran
+        los resultados detallados del comportamiento de DC<sub>j</sub> observado en la superficie total del área de estudio
+        y con respecto a la orientación del terreno.
+
+        <br><br>
+
+        Zona de Cambio Neto. La mayor parte de la superficie se comportó estable en cuanto al tipo de cobertura
+        presente, sin embargo, se observaron Zonas de Cambio en Cobertura (ZCC<sub>j</sub>) donde los pixeles mostraron un
+        comportamiento espectral relacionado con la posible sustitución de la cobertura en los períodos de estudio.
+        En el Período 1 (de 1990 a 2001) se clasificaron 11,507 pixeles como ZCC<sub>1</sub>, lo que representa el 8.7% del
+        área de estudio(1,035.6 ha); para el Período 2 (de 2001 a 2011) se clasificaron 8,478 pixeles como ZCC<sub>2</sub>,
+        lo que representa el 6.4% del área de estudio (763 ha)
+        <a href="/FG_07_RESULT_ZCC.jpg"
+               title="Hellow all"
+               target="popup"
+               onclick="window.open('/FG_07_RESULT_ZCC.jpg','popup','width=1000,height=500'); return false;">
+        (Figura 6)
+        </a>
+        .
+
+        <br><br>
+
+        <a href="/FG_07_RESULT_ZCC.jpg"
+               title="Hellow all"
+               target="popup"
+               onclick="window.open('/FG_07_RESULT_ZCC.jpg','popup','width=1000,height=500'); return false;">
+        <img src="FG_07_RESULT_ZCC.jpg" alt="Fig.6." title="Normal." class="center"
+        style="width:720px">
+        </a>
+        <figcaption><i>Fig 6. El color negro señala la Zona de Cambio en el período j (ZCC<sub>j</sub>): la imagen de la izquierda
+            corresponde a ZCC<sub>1</sub> (1990-2001) y la imagen derecha a ZCC<sub>2</sub> (2001-2011).
+ </i></figcaption>
+
+        <br><br>
+
+        Observamos que dentro de la superficie de ZCC<sub>j</sub>, el comportamiento de la Dirección de Cambio no es independientes
+        del período de estudio, &chi;<sup>2</sup> = 15,894, GL = 3, p < 0.000,&nbsp;&nbsp; lo que se aprecia en los datos &nbsp;&nbsp;del
+        Cuadro 5<sup>&nbsp;</sup><sub>&nbsp;</sub>.
+
+        <br><br>
+        <table>
+        <figcaption><i>Cuadro 5. Total de pixeles de acuerdo a la Dirección de Cambio observada
+            dentro de las Zonas de Cambio en cada período (ZCC<sub>j</sub>): en ZCC<sub>1</sub> la Dirección de Cambio
+            dominante fue Q<sub>3</sub> y en segundo lugar Q<sub>2</sub>, mientras que en ZCC<sub>2</sub>
+            lo fue el cuadrante Q<sub>1</sub>.</i></figcaption>
+            <TR align="center"><TH colspan="1">Período de cambio<TH>Q<sub></sub>1</sub><TH>Q<sub></sub>2</sub><TH>Q<sub></sub>3</sub><TH>Q<sub></sub>4</sub>
+                    <TR align="center"><TH colspan="1"<TD>&nbsp; </TD>&nbsp; <TD>&nbsp; </TD> <TD>&nbsp; </TD><TD>&nbsp; </TD>
+            <TR align="center"><TH colspan="1">ZCC<sub>1</sub> (1990-2001)<TD>963<TD>3,047<TD>7,320<TD>177
+            <TR align="center"><TH colspan="1">ZCC<sub>2</sub> (2001-2011)<TD>8,117<TD>3<TD>19<TD>339
+
+        </table>
+        <br><br>
+
+        Los cambios observados en los pixeles de ZCC<sub>j</sub> con respecto a la orientación del terreno, tampoco
+        son independientes del período de estudio, &chi;<sup>2</sup> = 943, GL=3, p < 0.000, (Cuadro 6).
+        <br><br>
+
+        <table>
+        <figcaption><i>Cuadro 6. Para el período 2001-2011 se observó una reducción notable del número de pixeles ZCN<sub>2</sub>
+            en orientaciones Sur, mientras que en orientaciones Norte hubo un ligero aumento.</i></figcaption>
+            <TR align="center"><TH colspan="1">Período de cambio<TH>NE<TH>SE<TH>SO<TH>NO
+                    <TR align="center"><TH colspan="1"<TD>&nbsp; </TD>&nbsp; <TD>&nbsp; </TD> <TD>&nbsp; </TD><TD>&nbsp; </TD>
+            <TR align="center"><TH colspan="1">ZCC<sub>1</sub> (1990-2001)<TD>2,898<TD>4,147<TD>2,926<TD>1,536
+            <TR align="center"><TH colspan="1">ZCC<sub>2</sub> (2001-2011)<TD>2,987<TD>1,745<TD>1,697<TD>2,049
+
+        </table>
+
+
+        <br><br>
+        Los cambios observados en los pixeles de ZC<sub>j</sub> con respecto a la orientación del terreno, tampoco son independientes
+        del período de estudio, &chi;<sup>2</sup> = 943, GL=3, p < 0.000,
+        <a href="/MAPS DC.jpg"
+               title="Hellow all"
+               target="popup"
+               onclick="window.open('/MAPS DC.jpg','popup','width=1000,height=500'); return false;">
+        (Figura 8)
+        </a>
+        .
+        <br><br>
+
+        <a href="/MAPS DC.jpg"
+               title="Hellow all"
+               target="popup"
+               onclick="window.open('/MAPS DC.jpg','popup','width=1000,height=500'); return false;">
+        <img src="MAPS DC.jpg" alt="Fig.8." title="Normal." class="center"
+        style="width:720px">
+        </a>
+
+            <figcaption><i>Fig 8. En el período 1990-2001 (izquierda) se observa una mayor superficie
+                de Q<sub>3</sub> y una superficie importante de Q<sub>2</sub>; para el período 2001-2011 (derecha) fue
+                ampliamente mayor la superficie de Q<sub>1</sub>.</i></figcaption>
+
+        <br><br>
+
+        Ahora, se observó también que el 93.2% de los pixeles clasificados como Q<sub>3</sub> en ZC<sub>1</sub>, para el segundo período
+        fueron clasificados como Q<sub>1</sub> pero quedando fuera de ZC<sub>2</sub>. Esto quiere decir que al final del Período 1 se
+        presentaron cambios de cobertura relacionados con pérdida de VV y posteriormente, al final del Período 2, la
+        mayor parte de esa superficie expresó una recuperación de VV pero sin cambio en el tipo de cobertura, es decir,
+        sin regresar a la condición de vegetación que se tenía al inicio del Período 1.
+
+        <br><br>
+        Se encontró también que la distribución espacial de la Dirección de Cambio (DC) dentro de ZC<sub>1</sub> no es
+        independiente de la orientación del terreno: &chi;<sup>2</sup> = 383, GL=9, p < 0.000, (Cuadro 7).
+
+        <br><br>
+        <table>
+            <figcaption><i>Cuadro 7. Se observa que los pixeles de ZC<sub>1</sub> se clasificaron mayormente con Dirección de Cambio Q<sub>3</sub> y con orientación Sur.</i></figcaption>
+            <TR align="center"><TH colspan="1">DC<TH>NE<TH>SE<TH>SO<TH>NO
+                    <TR align="center"><TH colspan="1"<TD>&nbsp; </TD>&nbsp; <TD>&nbsp; </TD> <TD>&nbsp; </TD><TD>&nbsp; </TD>
+            <TR align="center"><TH colspan="1">Q<sub>1</sub> <TD>336<TD>247<TD>159<TD>221
+            <TR align="center"><TH colspan="1">Q<sub>2</sub> <TD>830<TD>1,199<TD>533<TD>485
+            <TR align="center"><TH colspan="1">Q<sub>3</sub> <TD>1,690<TD>2,649<TD>2,189<TD>792
+            <TR align="center"><TH colspan="1">Q<sub>4</sub> <TD>42<TD>52<TD>45<TD>38
+
+        </table>
+        <br><br>
+
+        En el caso de la distribución espacial de DC dentro de ZC<sub>2</sub> se encontró que tampoco es independiente
+        de la orientación del terreno: &chi;<sup>2</sup> = 80, GL=9, p < 0.000, (Cuadro 8).
+        <br><br>
+
+        <table>
+            <figcaption><i>Cuadro 8. Se observa que Los pixeles dentro de ZC<sub>2</sub> fueron mayormente clasificados
+                con Dirección de Cambio Q<sub>1</sub> y con orientación Norte.</i></figcaption>
+            <TR align="center"><TH colspan="1">DC<TH>NE<TH>SE<TH>SO<TH>NO
+                    <TR align="center"><TH colspan="1"<TD>&nbsp; </TD>&nbsp; <TD>&nbsp; </TD> <TD>&nbsp; </TD><TD>&nbsp; </TD>
+            <TR align="center"><TH colspan="1">Q<sub>1</sub> <TD>2,897<TD>1,612<TD>1,622<TD>1,986
+            <TR align="center"><TH colspan="1">Q<sub>2</sub> <TD>1<TD>0<TD>0<TD>2
+            <TR align="center"><TH colspan="1">Q<sub>3</sub> <TD>9<TD>3<TD>4<TD>3
+            <TR align="center"><TH colspan="1">Q<sub>4</sub> <TD>80<TD>130<TD>71<TD>58
+
+        </table>
+        <br><br>
+
+        <b>Dirección de Cambio (DC)</b>. En cuanto al comportamiento general de la Dirección de Cambio dentro de
+        la superficie total de la zona de estudio en cada período (DC<sub>j</sub>), este fue muy similar a lo observado
+        anteriormente dentro de las Zonas de Cambio, en la Figura 8 se puede observar la clara dominancia de
+        Q<sub>3</sub> en el Período 1 y de Q<sub>1</sub> en el Período 2, lo anterior se corrobora con los datos del Cuadro 9.
+        <br><br>
+
+
+
+        <table>
+        <figcaption><i>Cuadro 9. Número de pixeles clasificados por Dirección de Cambio en cada período (DC<sub>j</sub>).</i></figcaption><TR align="center"><TH rowspan="2"><TH colspan="2">1990-2001<TH rowspan="2"><TH colspan="2">2001-2011
+            <TR align="center"><TH rowspan="1">DC<sub>1</sub><TH>Pixeles<TH>DC<sub>2</sub><TH>Pixeles
+            <TR align="center"><TH rowspan="1">&nbsp;<TH>&nbsp;<TH>&nbsp;<TH>
+            <TR align="center"><TH><TD colspan="1">Q<SUB>1</SUB><TD>6,709<TD colspan="1"><TD>Q<sub>1</sub><TD colspan="2">112,801
+            <TR align="center"><TH><TD colspan="1">Q<SUB>2</SUB><TD>42,183<TD colspan="1"><TD>Q<sub>2</sub><TD colspan="2">825
+            <TR align="center"><TH><TD colspan="1">Q<SUB>3</SUB><TD>78,066<TD colspan="1"><TD>Q<sub>3</sub><TD colspan="2">2,009
+            <TR align="center"><TH><TD colspan="1">Q<SUB>4</SUB><TD>5,658<TD colspan="1"><TD>Q<sub>4</sub><TD colspan="2">16,981
+
+        </table>
+        <br><br>
+
+        En la superficie total del área de estudio se observó que la distribución espacial
+        de DC<sub>1</sub> no es independiente de la orientación del terreno: &chi;<sup>2</sup> =
+        1,454, GL = 9, p < 0.000, (Cuadro 10).
+        <br><br>
+
+             <table>
+            <figcaption><i>Cuadro 10. En el Período 1 la mayor proporción de pixeles del área de
+                estudio fueron clasificados como Q<sub>3</sub> en todas las orientaciones de terreno pero
+                principalmente Sureste y Noreste; la Dirección de Cambio Q<sub>2</sub> tuvo también una
+                amplia presencia principalmente en orientación Sureste y Noreste.</i></figcaption>
+            <TR align="center"><TH colspan="1">DC<TH>NE<TH>SE<TH>SO<TH>NO
+                    <TR align="center"><TH colspan="1"<TD>&nbsp; </TD>&nbsp; <TD>&nbsp; </TD> <TD>&nbsp; </TD><TD>&nbsp; </TD>
+            <TR align="center"><TH colspan="1">Q<sub>1</sub> <TD>2,000<TD>1,895<TD>1,544<TD>1,270
+            <TR align="center"><TH colspan="1">Q<sub>2</sub> <TD>12,095<TD>16,482<TD>8,064<TD>5,542
+            <TR align="center"><TH colspan="1">Q<sub>3</sub> <TD>21,361<TD>25,712<TD>19,472<TD>11,520
+            <TR align="center"><TH colspan="1">Q<sub>4</sub> <TD>1,169<TD>1,587<TD>1,939<TD>963
+
+        </table>
+        <br><br>
+
+        En el caso de la distribución espacial de DC<sub>2</sub>, se observó que tampoco es
+        independiente de la orientación del terreno: &chi;<sup>2</sup> = 641, GL=9, p < 0.000, (Cuadro 11).
+        <br><br>
+
+                   <table>
+            <figcaption><i>Cuadro 11. En el Período 2 la mayor proporción de pixeles del área de
+                estudio fueron clasificados como Q<sub>1</sub> en todas la orientaciones de terreno pero
+                principalmente Sureste y Noreste. Se observó también un ligero aumento en el conteo
+                de pixeles con Dirección de Cambio Q<sub>4</sub>.</i></figcaption>
+            <TR align="center"><TH colspan="1">DC<TH>NE<TH>SE<TH>SO<TH>NO
+                    <TR align="center"><TH colspan="1"<TD>&nbsp; </TD>&nbsp; <TD>&nbsp; </TD> <TD>&nbsp; </TD><TD>&nbsp; </TD>
+            <TR align="center"><TH colspan="1">Q<sub>1</sub> <TD>31,092<TD>38,978<TD>27,132<TD>15,598
+            <TR align="center"><TH colspan="1">Q<sub>2</sub> <TD>200<TD>285<TD>220<TD>120
+            <TR align="center"><TH colspan="1">Q<sub>3</sub> <TD>513<TD>497<TD>437<TD>562
+            <TR align="center"><TH colspan="1">Q<sub>4</sub> <TD>4,820<TD>5,916<TD>3,230<TD>3,015
+
+        </table>
+        <br><br>
+
+        <h2>
+    <div style="font-weight: bold; background:none; color:black; font-style:italic">
+            &emsp;Discusión
+    </div>
+       </h2>
+        La mayor parte del área de estudio presentó cambios moderados a través de las tres fechas observadas,
+        lo que se determinó por la reducida superficie obtenida de ZC<sub>j</sub> que representa cambios de mayor
+        intensidad; lo anterior coincide con los datos obtenidos por Díaz <i>et al</i>., (2016) y Chapa (2008)
+        quienes reportan cambios menores en el paisaje del ANPSF en el período 1956-2003, y coincide también con
+        los datos de Creel y Gutiérrez (2009) donde reportan una baja tasa de cambio de la vegetación primaria
+        entre 1990 y 2000. Sin embargo, en el período 1990-2001 pudimos clasificar 11,507 pixeles (1,035 ha) como
+        ZC<sub>1</sub>, de las cuales 650 ha fueron cambios relacionados con pérdida de vigor vegetal (5.5% del área de estudio),
+        resultados que coinciden proporcionalmente con los datos publicados por Gobierno del Estado de Aguascalientes
+        (2014) donde se reporta la pérdida de bosques primarios en una superficie equivalente al 5.9% de la Sierra
+        Fría en el período 1990-2000. Con respecto a la superficie que fue clasificada como Q<sub>3</sub> dentro de ZC<sub>1</sub>, creemos
+        que podría tratarse de zonas donde la vegetación primaria original fue sustituida con vegetación secundaria
+        (Siqueiros <i>et al</i>., 2016) ya sea de manera total o parcial. Posteriormente, en el período 2001-2011 se
+        clasificaron 762 ha como ZC<sub>2</sub>, de las cuales 730 presentaron ganancia de Vigor Vegetal (6% del área de estudio),
+        lo que podría tratarse de zonas que se encuentran en alguna etapa de sucesión regenerativa, probablemente
+        siguiendo la ruta sucesional en la que <i>Juniperus deppeana</i> y <i>Arctostaphylos pungens</i> son sustituidos por <i>Q.
+        potosina</i> y <i>Q. rugosa</i> (Díaz, 2012).
+        <br><br>
+
+        El comportamiento general del Vigor Vegetal en la superficie total de la zona de estudio fue
+        diferente en cada período en lo que respecta a la Dirección de Cambio. El período 1990-2001 se
+        caracteriza por presentar pérdida de Vigor Vegetal en el 58% del área de estudio, y además por
+        registrar 690 mm de evaporación en el ciclo invernal correspondiente a la imagen de 2001, cifra
+        muy superior a los valores observados para las otras fechas analizadas. En ese mismo período también
+        se detectó una superficie de 3,796 ha de Q<sub>2</sub> (32% del área de estudio), lo que puede deberse al
+        incremento en el contenido de agua de la vegetación a causa del evento de lluvia de 24 mm registrado
+        4 días antes de la adquisición de la imagen con fecha 22/04/01; de lo anterior, creemos que el
+        incremento de humedad se reflejó en el NDWI antes que en el NDVI (Gu, 2007) por la alta sensibilidad
+        del SWIR a la presencia de agua (Palacios, <i>et al</i>., 2005; Gao, 1996). El año 2011 se caracteriza por
+        haber registrado los valores más bajos de evaporación para el ciclo invernal (273 mm), lo que
+        probablemente influyó en el comportamiento general de ganancia de Vigor Vegetal que se presentó en
+        el 85% del área de estudio.
+        <br><br>
+
+        Es posible que el clima sea el principal factor que influyó sobre el comportamiento del Vigor
+        Vegetal en cada período, y la topografía aumentó su potencial de afectación ya que las superficies
+        convexas y con orientación Sur fueron más susceptibles a presentar Zonas de Cambio relacionadas con
+        pérdida de Vigor Vegetal, particularmente en condiciones de sequía, mientras que las Zonas de Cambio
+        relacionadas con la ganancia de vigor se observaron en su mayoría en superficies cóncavas y con
+        orientación Norte. Aunado a esto, la fragmentación del bosque puede modificar las condiciones de
+        luminosidad, viento, temperatura y humedad al interior de la masa forestal, y de acuerdo a las
+        condiciones de pendiente, orientación del terreno y su curvatura, pueden originarse diferentes
+        combinaciones microclimáticas que afectan directamente sobre la regeneración, el desarrollo y la
+        sobrevivencia de las especies vegetales presentes (von Arx, Graf, Thimonier y Rebetez, 2013; Gómez,
+        2004; Promis, Caldetey e Ibarra, 2010; Chen <i>et al</i>., 1999).
+        <br><br>
+
+        No descartamos la presencia de perturbaciones secundarias que hayan influido en la superficie
+        detectada de Zonas de Cambio en el período 1990-2001. Las condiciones de sequía pudieron provocar
+        el debilitamiento de las poblaciones forestales, facilitando el ataque de plagas y enfermedades;
+        existen registros de infestaciones importantes de descortezadores en la Sierra Fría en enero de
+        2001, donde además fueron removidos 12,000 árboles como medida inicial de saneamiento (Asociación
+        Sierra Fría, 2002). Además, en la zona de estudio se observan poblaciones importantes y ampliamente
+        distribuidas de <i>Juniperus deppeana</i> y <i>Q. potosina</i>, en las que se reportan las principales tendencias
+        de fragmentación (Chapa, 2008), además, tanto <i>Juniperus deppeana</i> como <i>Q. potosina</i> son particularmente
+        vulnerables al ataque de muérdagos, y existen antecedentes de infestaciones importantes en la parte
+        central de la Sierra Fría (Clark, 2011). Por otro lado, la Sierra Fría es considerada zona de alto
+        riesgo en materia de incendios forestales (Salado y Martínez, 2008) y para el año 2000 se reportaron
+        un total de 8 incendios en el estado de Aguascalientes que cubrieron un total de 851 ha
+        (CONAFOR, 2017), por lo que es muy posible que algunos de esos eventos se hayan presentado dentro del
+        área de estudio.
+        <br><br>
+
+        Los resultados obtenidos no fueron validados en campo y tampoco se contó con información previa
+        referente a estudios sobre la dinámica del Vigor Vegetal que permitieran realizar algún tipo de
+        comparación. Los resultados que obtuvimos pueden ser de utilidad para estudios posteriores en el
+        monitoreo de la dinámica temporal de grupos vegetales específicos y para determinar otras medidas
+        como la fragmentación del paisaje; del mismo modo, para estudios posteriores se recomienda integrar
+        los registros georreferenciados de incendios y de la incidencia de plagas forestales, ya que estos
+        podrían explicar la naturaleza de algunos cambios observados.
+        <br><br>
+
+        <h2>
+    <div style="font-weight: bold; background:none; color:black; font-style:italic">
+            &emsp;Conclusiones y recomendaciones
+    </div>
+       </h2>
+
+        Se detectaron cambios moderados en la mayor parte de la superficie a través de los dos períodos
+        de estudio, y una tendencia de recuperación del Vigor Vegetal al final del período 2001-2011.
+        En el período 1990-2001
+        se detectó una pérdida de Vigor Vegetal en el 58% del área de estudio aunque solo 650 ha presentaron
+        posible cambio de tipo
+        de cobertura en esa tendencia; en el período 2001-2011 se detectó una ganancia de Vigor Vegetal
+        en el 85% del área de estudio pero solo 730 ha presentaron cambio de tipo de cobertura
+        en ese sentido.
+        <br><br>
+
+        Existen elementos para suponer que las coberturas vegetales que se localizan en terrenos con
+        orientación Sur son más propensas a presentar pérdida de Vigor Vegetal en condiciones de sequía.
+        De lo anterior creemos que es conveniente diseñar programas de monitoreo forestal que
+        consideren la influencia del factor topográfico sobre la vegetación en escenarios de sequía.
+        <br><br><br>
+        <hr>
+        <br><br>
+
+        <h2>
+    <div style="font-weight: bold; background:none; color:black; font-style:italic">
+            &emsp;Referencias
+    </div>
+       </h2>
+
+        <section style = "color:dark grey; opacity:0.79">
+        Agresti, A. 2002. <i>Categorical data analysis</i>. John Wiley & Sons. Florida. 710 p.
+        <br><br>
+        Aguilar, H., Mora, R., y Vargas, C. 2014. <i>Metodología para la corrección atmosférica de
+        imágenes ASTER, Rapideye, SPOT 2 y Landsat ( con el módulo FLAASH del software ENVI)</i>.
+        Revista Geográfica de América Central, 2(53): 39-59. DOI: 10.15359/rgac.253.2
+        <br><br>
+        Alemayehu, T., Rectalá, R., Fabbri, A., y Sánchez, J. 2006. <i>Land use change detection
+        as a basis for analysing desertification processes: a case study in Tabernas (Almeria, Spain)</i>.
+        Springer. Desertification in the Mediterranean Region. A security issue. 341-352.
+        <br><br>
+        Asociación Sierra Fría (A. S. F.). 2002. <i>Situación contra la lucha del descortezador
+        del pino (Dendroctonus spp.) en la Sierra Fría, Aguascalientes </i> (Informe sometido a la
+        embajada estado- unidense en México). 18 p.
+        <br><br>
+        Alwis, D., Easton, Z., Dhalke, H., Philpot, W., y Steenhuis, T. 2007. <i>Unsupervised
+        classification of saturated areas using a time series of remotely sensed images</i>.
+        Hydrology and earth system sciences. 11: 1609-1620. Recuperado de:
+        https://www.researchgate.net/publication/26640225_Unsupervised_Classification_of_Saturated_Areas
+        _Using_a_Time_Series_of_Remotely_Sensed_Images
+        <br><br>
+        Arriola, V., Estrada, E., Ortega, A., Pérez, R., y Gijón, A. 2014. <i>Deterioro en
+        áreas naturales protegidas del centro de México y del Eje Neovolcánico Transversal</i>.
+        Investigación y Ciencia de la Universidad Autónoma de Aguascalientes 60:37-49.
+        <br><br>
+        Azzouzi, S., Vidal,A., y Bentounes, H.B. 2015. <i>A modified approach for change detection
+        using Change Vector Analysis in posterior probability space</i>. The international archives
+        of the Photogrammetry, Remote sensing and spatial information sciences 40(7).
+        <br><br>
+        Bezaury, J., y Gutiérrez, D. 2009. <i>Áreas naturales protegidas y desarrollo social en
+        México, en Capital natural de México, vol. II: Estado de conservación y tendencias de
+        cambio</i>. Conabio, México, pp. 385-431.
+        <br><br>
+        Bhandari, A., Kumar, A., y Singh, G. 2012. <i>Feature extraction using Normilized Difference
+        vegetation Index (NDVI): a case study of Jabalpur City</i>. Procedia technology, 6: 612-621.
+        DOI:10.1016/j.protcy.2012.10.074
+        <br><br>
+        Carvalho, O., Guimaraes, R., Gillespie, A., Silva, N., y Gomes, R. 2011. <i>A new approach
+        to Change Vector Analysis using distance and similarity measures</i>. Remote sensing.
+        3: 2473- 2493. DOI:10.3390/rs3112473
+        <br><br>
+        Chapa, D., Sosa, J., y De Alba, A. 2008. <i>Estudio multitemporal de fragmentación de los
+        bosques en la Sierra Fría, Aguascalientes, México</i>. Madera y bosques, 14(1): 37-51.
+        <br><br>
+        Chen, J., Saunders, S., Crow, T., Naiman, R., Brosofske, K., Mroz, G., Brookshire, B., y
+        Franklin, J. 1999. <i>Microclimate in forest ecosystem and landscape ecology: variations in
+        local climate can be used to monitor and compare te effects of different managemente regimes</i>.
+        BioScience 49(4): 288-297.
+        <br><br>
+        Chuvieco, E. 2010. <i>Teledetección ambiental: la observación de la tierra desde el espacio</i>.
+        Ariel. Barcelona. 590 p.
+        <br><br>
+        Clark, R., Torres, B., Alfonso, C., Valdez, J., González, G., Bretado, J., y Campos, J. 2011.
+        <i>Análisis de la abundancia e infección por muérdago en Sierra Fría, Aguascalientes, México</i>.
+        Madera y Bosques 17(2):19-33. DOI: 10.21829/myb.2011.1721146
+        <br><br>
+        Comisión Nacional del Agua [CONAGUA]. 2017. <i>Observando el tiempo. México</i>.: CONAGUA.
+        Recuperado de: http://200.4.8.20/tools/RESOURCES/Diarios/1010.txt
+        <br><br>
+        Comisión Nacional Forestal [CONAFOR]. 2017. <i>Temas forestales: incendios. México</i>:. CONAFOR.
+        Recuperado de: http://www.conafor.gob.mx/web/temas-forestales/incendios/
+        <br><br>
+        Díaz, V. 2012. <i>Ecología y manejo de paisajes forestales en la Sierra Fría, Aguascalientes,
+        México (Tésis de doctorado)</i>. Universidad Autónoma de Aguascalientes. Aguascalientes, México.
+        <br><br>
+        Díaz, V., Sosa, J., y Macías, I. 2014. <i>Diagnóstico fitosanitario de la vegetación en
+        ecosistemas prioritarios de Aguascalientes</i>. Comisión Nacional Forestal-Secretaría del
+        Medio Ambiente del Estado de Aguascalientes. 84 p.
+        <br><br>
+        Díaz, V., Sosa, J., y Pérez, D. 2016. <i>Vegetation patch dynamics and tree diversity in a
+        conifer and oak forest in central Mexico</i>. Botanical Sciences. 94 (2): 229-240.
+        <br><br>
+        Ediriweera, S., Pathirana, S., Danaher, T., Nichols, D., y Moffiet, T. 2013. <i>Evaluation of
+        different topographic corrections for Landsat TM data by prediction of Foliage Projective
+        Cover (FPC) in topographically complex landscapes</i>. Remoste sens. 5(12), 6767-6789. DOI:
+        10.3390/rs5126767
+        <br><br>
+        Espinosa, J., Palacios, E., Tijerina, L., Flores, M., y Quevedo, H. 2017. <i>Sistema de monitoreo
+        satelital para el seguimiento y desarrollo de cultivos del Distrito de Riego 038</i>. Tecnología y
+        Ciencias del Agua 8(1):. 95-104.
+        <br><br>
+        Gao, B., 1996. <i></i>NDWI—a normalized difference water index for remote sensing of vegetation
+        liquid water from space</img>. Remote Sensing of Environment 58: 257–266. Recuperado desde:
+        http://ceeserver.cee.cornell.edu/wdp2/cee6150/Readings/Gao_1996_RSE_58_257- 266_NDWI.pdf
+        <br><br>
+        Gobierno del Estado de Aguascalientes. <i>Periódico Oficial, Tomo LVII, Núm. 5</i>, 27pp., 1994.
+        <br><br>
+        Gobierno del Estado de Aguascalientes. 2014. <i>Programa Estatal de Ordenamiento Ecológico y
+        Terriotorial Aguascalientes 2013-2035 2014</i>. Consultado desde:
+        http://www.ordenjuridico.gob.mx/Documentos/Estatal/Aguascalientes/wo99062.pdf
+        <br><br>
+        Gobierno del Estado de Aguascalientes. 2016. <i>Programa de Manejo del Área Natural Protegida
+        Área Silvestre Estatal Sierra Fría</i>. Consultado desde:
+        file:///C:/Users/Subdireccion%20Admin/Downloads/19- 09052016(Tercera%20Secc.)%20(2).pdf
+        <br><br>
+        Gómez, V. 2004. <i>Cubiertas forestales y respuesta microclimática</i>. Investigaciones agrarias.
+        Fuera de serie: 84-100. Consultado desde: http://revistas.inia.es/index.php/fs/article/view/857/854
+        <br><br>
+        Gu, Y., Brown, J., Verdin, J., y Wardlow, B. 2007. <i>A five year analysis of MODIS NDVI and NDWI
+        for grassland drough assessment over the central Great Plains of the United States</i>. Agu publications 34(6).
+        Consultado desde:
+        http://onlinelibrary.wiley.com/doi/10.1029/2006GL029127/full#grl22844-bib-0007
+        <br><br>
+        Harris Geospatial Solutions [HGS]. 2017. <i>Atmospheric Corrections: Fast Line of Sight Atmospheric
+        Analysis of Hypercubes (FLAASH)</i>. Docs Center. Recuperado de:
+        http://www.harrisgeospatial.com/docs/FLAASH.html
+        <br><br>
+        Instituto Nacional de Estadística y Geografía (INEGI). 2017. <i>Geografía: datos de relieve</i>. Consultado desde:
+        http://www3.inegi.org.mx/sistemas/productos/default.aspx?cl=209010200
+        <br><br>
+        Jiménez, C., Sosa, J., Cortéz, P., Solís, A., Íñiguez, L., y Ortega, A. 2014. <i>México país
+        megadiverso y la relación con las áreas naturales protegidas</i>. Investigación y Ciencia de la
+        Universidad Autónoma de Aguascalientes 60:16-22.
+        <br><br>
+        Louakfaoui, E., Casanova, J., y Romo, A. 2001. <i>El TVI (Thermal Vegetation Index) y el vector
+        de cambio para el seguimiento y control de la deforestación</i>. Teledetección, medio ambiente y
+        cambio global.
+        <br><br>
+        Lozano, L.F. 2010. <i>Programa para la conservación y manejo de un área silvestre estatal: Sierra
+        Fría, Aguascalientes (México)</i>. Universidad Internacional de Andalucía.
+        <br><br>
+        Meera, G., Parthiban, S., y Nagaraj, C. 2015. <i>NDVI: vegetation change detection using remote
+        sensing and GIS- a case of study of Vellore District</i>. Procedia Computer Science 57: 1199-1210.
+        <br><br>
+        Myint, S., Yuan, M., Cerveny, R., y Giri, C. 2008. <i>Comparison of remote sensing image processing
+        technics to identify tornado damage areas from Landsat TM data</i>. Sensors. 8(2): 1128-1156. DOI:
+        10.3390/s8021128
+        <br><br>
+        Nainggolan, D., de Vente, J., Boix, C., Termansen, M., Hubaccek, K., y Reed, R. 2012.
+        <i>Afforestation, agricultural abandonment and intensification: Competing trajectories in
+        semiarid Mediterranean agro-ecosystems</i>. Agriculture, ecosystems and environment 159: 90-104.
+        <br><br>
+        Palacios, A., Khanna, S., Litago, J., Whiting, M., y Ustin, S. 2005. <i>Assessment of
+        NDVI and NDWI spectral indices using MODIS time series analysis development of a new spectral
+        index based on MODIS shortwave infrared bands</i>. Consultado desde:
+        https://www.researchgate.net/publication/258110048_Assessment_of_NDVI_and_NDWI _spectral_indices_using_MODIS_time_series_analysis_and_development_of_a_new_spe ctral_index_based_on_MODIS_shortwave_infrared_bands
+        <br><br>
+        Promis, a., Caldentey, J., e Ibarra, M. 2010. <i>Microclima en el interior de un bosque de
+        Nothofagus pumilio y el efecto de una corta de regeneración</i>. Bosque 31(2): 129-139.
+        <br><br>
+        Rodríguez, V., y Bullock, S. 2013. <i>Comparación espacial y temporal de índices de la vegetación
+        para verdor y humedad y aplicación para estimar LAI en el desierto Sonorense</i>. Revista mexicana
+        de ciencias agrícolas 4(4): 611-623.
+        <br><br>
+        Salado, A., y Martínez V. 2008. <i>Amenazas a la biodiversidad: incendios forestales. La biodiversidad
+        en Aguascalientes: estudio de estado</i>. Comisión Nacional para el Conocimiento y Uso de la
+        Biodiversidad (CONABIO) (Ed). pp: 273-277. Aguascalientes, México: CONABIO. Recuperado de:
+        http://www.biodiversidad.gob.mx/region/EEB/pdf/ESTUDIO%20DE%20BIODIVERSID AD%20EN%20AGUASCALIENTES.pdf
+        <br><br>
+        Singht, S., y Talwar, R. 2014. <i>A comparative study on Change Vector Analysis based change detection
+        techniques</i>. Sadhana 39(6): 1311-1331.
+        <br><br>
+        Siqueiros, M.E.; Rodríguez, J.A.; Martínez, J., y Sierra, J.C. 2016. <i>Situación actual de la
+        vegetación en el estado de Aguascalientes, México</i>. Botanical Sciences. 94 (3): 455-470. DOI:
+        10.17129/botsci.466
+        <br><br>
+        Sosa, J., Solís, A., Jiménez, C., Íñiguez, L., y Ortega, A. 2014. <i>Manejo del Área natural protegida
+        Sierra Fría, Aguascalientes: situación actual y desafíos</i>. Investigación y Ciencia de la Universidad
+        Autónoma de Aguascalientes 60: 71-77.
+        <br><br>
+        Sosa, J., Breceda, A., Jiménez, C., Íñiguez, L., Ortega, A. 2015. <i>Los ecosistemas de la Sierra Fría en
+        Aguascalientes y su conservación</i>. En A. Ortega. (Ed)., Las Áreas Naturales Protegidas y la investigación
+        científica en México. pp. 447-472. La Paz. México. Red Áreas Naturales Protegidas.
+        <br><br>
+        U.S. Geological Survey. 2017. <i>Earth Explorer. Base de datos</i>. Consultado desde: https://earthexplorer.usgs.gov.
+        <br><br>
+        Von Arx, G., Graf, E., Thimonier, A., y Rebetez, M. 2013. <i>Microclimate in forest varying leaf area index
+        and soil moisture: potential implications for seedling establishment in a changing climate</i>. Journal of
+        ecology 101 (5):1201-1213. DOI: 10.1111/1365-2745.12121
+        <br><br><br>
+
+        </section>
+
+
+        <hr>
+
+        <br><br>
+
+
+    </div>
+
+    </section>
+
+</body>
+</html>
